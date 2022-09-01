@@ -1,0 +1,16 @@
+body {
+	width: 100%;
+	margin: 0 auto;
+	font: 1.1rem/1.25 Arial, sans-serif;
+	background-color: #f5f5f5;
+	color: #4d4d4d;
+}
+
+.Todo {
+	background: #fff;
+	max-width: 58rem;
+	margin: 1rem auto 0 auto;
+	padding: 1rem;
+	position: relative;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+}

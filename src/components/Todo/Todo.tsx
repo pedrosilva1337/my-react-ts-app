@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function Todo(props) {
 	const [isEditing, setEditing] = useState(false);
@@ -32,14 +32,14 @@ export default function Todo(props) {
 			<div className='flex flex-row justify-between'>
 				<button
 					type='button'
-					className='differentBasis bg-white hover:bg-zinc-100 active:bg-zinc-200 text-black font-normal border-solid border-2 border-black focus:outline-none focus:underline'
+					className='basis-49 bg-white hover:bg-zinc-100 active:bg-zinc-200 text-black font-normal border-solid border-2 border-black focus:outline-none focus:underline'
 					onClick={() => setEditing(false)}
 				>
 					Cancel
 				</button>
 				<button
 					type='submit'
-					className='differentBasis bg-black hover:bg-gray-900 active:bg-blac text-white font-bold focus:outline-none focus:underline'
+					className='basis-49 bg-black hover:bg-gray-900 active:bg-blac text-white font-bold focus:outline-none focus:underline'
 				>
 					Save
 				</button>
@@ -65,14 +65,14 @@ export default function Todo(props) {
 			<div className='flex flex-row justify-between'>
 				<button
 					type='button'
-					className='differentBasis bg-white hover:bg-zinc-100 active:bg-zinc-200 text-black font-normal border-solid border-2 border-black focus:outline-none focus:underline'
+					className=' basis-49 bg-white hover:bg-zinc-100 active:bg-zinc-200 text-black font-normal border-solid border-2 border-black focus:outline-none focus:underline'
 					onClick={() => setEditing(true)}
 				>
 					Edit
 				</button>
 				<button
 					type='button'
-					className='differentBasis bg-red-700 hover:bg-red-800 active:bg-red-900 text-white font-bold focus:outline-none focus:underline'
+					className='basis-49 bg-red-700 hover:bg-red-800 active:bg-red-900 text-white font-bold focus:outline-none focus:underline'
 					onClick={() => props.deleteTask(props.id)}
 				>
 					Delete
@@ -82,6 +82,6 @@ export default function Todo(props) {
 	);
 
 	return (
-		<li className='todo py-2'>{isEditing ? editingTemplate : viewTemplate}</li>
+		<li className='\ py-2'>{isEditing ? editingTemplate : viewTemplate}</li>
 	);
 }

@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function FilterButton(props) {
 	return (
 		<div className=' mt-2 items-center text-center'>
