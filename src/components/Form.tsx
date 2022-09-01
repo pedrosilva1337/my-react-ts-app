@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function Form() {
+export default function Form(props) {
+	function handleChange(e) {
+		setName(e.target.value);
+	}
+
+	const [name, setName] = useState("");
+
+	function handleSubmit(e) {
+		e.preventDefault();
+		props.addTask(name);
+		setName("");
+	}
+
 	return (
-		<form className='text-center'>
+		<form onSubmit={handleSubmit} className='text-center'>
 			<h2 className='mb-4'>
 				<label className='text-3xl font-semibold' htmlFor='new-todo-input'>
 					What needs to be done?
@@ -13,6 +25,8 @@ export default function Form() {
 				id='new-todo-input'
 				name='text'
 				className=' flex shadow appearance-none border h-12 w-1/2 px-4 mb-2 mx-auto text-gray-700'
+				value={name}
+				onChange={handleChange}
 			/>
 			<button
 				type='submit'
