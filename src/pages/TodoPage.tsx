@@ -4,6 +4,7 @@ import "../styles/Todo.css";
 import FilterButton from "../components/Todo/FilterButton";
 import Form from "../components/Todo/Form";
 import Todo from "../components/Todo/Todo";
+import Navbar from "../components/Navbar/Navbar";
 
 const FILTER_MAP = {
 	All: () => true,
@@ -75,6 +76,7 @@ function TodoPage(props) {
 
 	return (
 		<div className='Todo'>
+			<Navbar></Navbar>
 			<h1 className='text-center text-5xl font-bold mb-4'>My Todo List</h1>
 			<Form addTask={addTask}></Form>
 			<div className='flex flex-wrap flex-row justify-around w-1/2 mx-auto'>

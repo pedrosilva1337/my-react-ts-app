@@ -1,22 +1,9 @@
 import { Link } from "react-router-dom";
 import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
-	return (
-		<div className='Home'>
-			<ul className='App-header'>
-				<li>
-					<Link to='/'>Home</Link>
-				</li>
-				<li>
-					<Link to='/todo'>Todo App</Link>
-				</li>
-				<li>
-					<Link to='/finances'>Finances</Link>
-				</li>
-			</ul>
-		</div>
-	);
+	return <Navbar></Navbar>;
 }
 
 export default App;
