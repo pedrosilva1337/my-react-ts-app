@@ -75,21 +75,23 @@ function TodoPage(props) {
 	}
 
 	return (
-		<div className='Todo'>
-			<Navbar></Navbar>
-			<h1 className='text-center text-5xl font-bold mb-4'>My Todo List</h1>
-			<Form addTask={addTask}></Form>
-			<div className='flex flex-wrap flex-row justify-around w-1/2 mx-auto'>
-				{filterList}
-			</div>
+		<div>
+			<Navbar todo='active'></Navbar>
+			<div className='Todo'>
+				<h1 className='text-center text-5xl font-bold mb-4'>My Todo List</h1>
+				<Form addTask={addTask}></Form>
+				<div className='flex flex-wrap flex-row justify-around w-1/2 mx-auto'>
+					{filterList}
+				</div>
 
-			<div className='max-w-md mx-auto'>
-				<h2 className='font text-3xl font-medium mt-6 text-center'>
-					{headingText}
-				</h2>
-				<ul role='list' className='todo-list'>
-					{taskList}
-				</ul>
+				<div className='max-w-md mx-auto'>
+					<h2 className='font text-3xl font-medium mt-6 text-center'>
+						{headingText}
+					</h2>
+					<ul role='list' className='todo-list'>
+						{taskList}
+					</ul>
+				</div>
 			</div>
 		</div>
 	);

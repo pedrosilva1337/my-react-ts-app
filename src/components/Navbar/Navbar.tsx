@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "../../styles/Navbar.css";
 
-export default function Navbar() {
+export default function Navbar(props) {
 	return (
-		<div className='App'>
-			<ul className='App-header'>
-				<li>
-					<Link to='/'>Home</Link>
+		<div>
+			<ul className='nav'>
+				<li className={props.home}>
+					<Link to='/'>
+						<button className='btn'>Home</button>
+					</Link>
 				</li>
-				<li>
-					<Link to='/todo'>Todo App</Link>
+				<li className={props.todo}>
+					<Link to='/todo'>
+						<button className='btn'>Todo App</button>
+					</Link>
 				</li>
-				<li>
-					<Link to='/finances'>Finances</Link>
+				<li className={props.finances}>
+					<Link to='/finances'>
+						<button className='btn'>Finances</button>
+					</Link>
 				</li>
 			</ul>
 		</div>
